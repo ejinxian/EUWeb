@@ -1,0 +1,56 @@
+﻿@{
+    ViewBag.Title = "下订单";
+}
+
+<div id="pageID" name="shoppingOrder" class="pageIdHide"></div>
+<!-- row1 begin -->
+<div class="row" style="margin-top:20px;margin-bottom:10px;">
+    <label style="font-size:20px;">填写并核对订单信息</label>
+    <table class="table table-striped" style="font-size:16px;">
+        <tr>
+            <td>
+                <strong>收货人信息</strong><br>
+                <button class="btn btn-default">张三 上海</button>
+                <span>虹口区</span>广灵四路666号666室 1380013800 <strong>默认</strong><br>
+                更多地址
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <strong>送货清单</strong><br>
+                <button class="btn btn-default">普通快递</button><button class="btn btn-default">自提</button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <strong>发票信息</strong><br>
+                普通发票 &nbsp&nbsp个人&nbsp&nbsp明细&nbsp&nbsp修改
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="checkbox" name="">&nbsp&nbsp使用优惠券  当前优惠券 <span style="color:#6699FF">选择</span><br>
+                <input type="checkbox" name="">&nbsp&nbsp使用积分抵扣  当前积分 666666<br>
+                <input type="checkbox" name="">&nbsp&nbsp使用账户余额  当前余额 0<br>
+            </td>
+        </tr>
+    </table>
+</div>
+<!-- row1 end -->
+<div class="row text-right shopOrder-row2">
+    已选择4件商品 ，<span class="rowP1">总价：</span><span class="rowP1">2325元</span><br>
+    <span>抵扣：</span><span class="span-width">0.00</span><br>
+    <span>运费：</span><span>0.00</span><br>
+</div>
+<!-- row 3 begin-->
+<div class="row" style="height: 60px;margin-top:20px;margin-bottom:20px;background-color:#f7f7f7;padding:10px 0px;">
+    <div class="col-md-6">
+        配送至：上海市宝山区友谊路1016号&nbsp&nbsp 收件人：张三 &nbsp&nbsp 13800138001
+    </div>
+    <div class="col-md-6 text-right">
+        已选择 4件 商品,总价<strong style="color:#990000;font-size:20px;">26234.00元</strong>
+        <button class="btn btn-danger" style="background-color:#990000;font-size:20px;">去结算</button>
+    </div>
+</div>
+<!-- row 3 end -->
+ 

@@ -1,0 +1,137 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+    @Styles.Render("~/Content/dealer")
+        @Styles.Render("~/Content/supplier")
+
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"></button>
+                <a class="navbar-brand" href="#">你好，欢迎访问XX网</a>
+            </div>
+            @*<div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li>@Html.ActionLink("主页", "Index", "Home", new { area = "" }, null)</li>
+                        <li>@Html.ActionLink("API", "Index", "Help", new { area = "" }, null)</li>
+                    </ul>
+                </div>*@
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">我的XX</a></li>
+                    <li><a href="#">|</a></li>
+                    <li><a href="#">帮助中心</a></li>
+                </ul>
+                @Html.Partial("_LoginPartial")
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid body-content">
+        <div class="row footer-row1" style="min-height:500px">            
+            @RenderBody()
+        </div>
+        <div class="row footer-row1">
+            <footer>
+                <div class="row footer-row1" style="background-color:#F5F5F5;">
+                    <div class="col-md-2" style="margin-left:200px;">
+                        <img src="../image/footer/footer_row_10.png" style="height:55px;width:144px;">
+                    </div>
+                    <div class="col-md-2">
+                        <img src="../image/footer/footer_row_11.png" style="height:55px;width:144px;">
+                    </div>
+                    <div class="col-md-2">
+                        <img src="../image/footer/footer_row_12.png" style="height:55px;width:144px;">
+                    </div>
+                    <div class="col-md-2">
+                        <img src="../image/footer/footer_row_13.png" style="height:55px;width:144px;">
+                    </div>
+                    <div class="col-md-2">
+                        <img src="../image/footer/footer_row_14.png" style="height:55px;width:144px;">
+                    </div>
+                </div>
+                <div class="row footer-row1" style="background-color:#F5F5F5;">
+                    <div class="col-md-2" style="padding-top:10px;">
+                        <img src="" style="height:80px;width:144px;margin-left:80px;">
+                    </div>
+                    <div class="col-md-6">
+                        <div class="row">
+                            <ul class="nav navbar-nav navbar-right">
+                                <li><a href="#">关于壹优</a></li>
+                                <li><a href="#">|</a></li>
+                                <li><a href="#">加入壹优</a></li>
+                                <li><a href="#">|</a></li>
+                                <li><a href="#">联系我们</a></li>
+                                <li><a href="#">|</a></li>
+                                <li><a href="#">服务条款</a></li>
+                                <li><a href="#">|</a></li>
+                                <li><a href="#">法律声明</a></li>
+                            </ul>
+                        </div>
+                        <div class="row">
+                            <ul class="nav navbar-nav navbar-right">
+                                <li><a href="#">商家登录</a></li>
+                                <li><a href="#">|</a></li>
+                                <li><a href="#">帮助中心</a></li>
+                                <li><a href="#">|</a></li>
+                                <li><a href="#">友情链接</a></li>
+                                <li><a href="#">|</a></li>
+                                <li><a href="#">壹优微信</a></li>
+                                <li><a href="#">|</a></li>
+                                <li><a href="#">壹优微博</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-2" style="padding-top:10px;margin-left:50px;">
+                        <img src="" style="height:80px;width:80px;">
+                        <img src="" style="height:80px;width:80px;">
+                    </div>
+                    <div class="col-md-1" style="font-size:20px;color:#9B1A54;padding-top:20px;">
+                        <div class="row">客服热线:</div>
+                        <div class="row">400 266 766</div>
+                    </div>
+                </div>
+                <div class="row footer-row1" style="background-color:#F5F5F5;">
+                    <div class="col-md-3">
+                    </div>
+                    <div class="col-md-6">
+                        <div class="row" style="font-size:14px;">Copyright © 2016 Yiyou. All Rights Reserved 沪ICP备00000000000号 ICP证：沪B2-20160000</div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <img src="../image/footer/footer_row_30.png" style="height:32px;width:105px;">
+                            </div>
+                            <div class="col-md-3">
+                                <img src="../image/footer/footer_row_31.png" style="height:32px;width:105px;">
+                            </div>
+                            <div class="col-md-3">
+                                <img src="../image/footer/footer_row_32.png" style="height:32px;width:105px;">
+                            </div>
+                            <div class="col-md-3">
+                                <img src="../image/footer/footer_row_33.png" style="height:32px;width:105px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                    </div>
+                </div>
+
+                <p>&copy; @DateTime.Now.Year - 经销商网站</p>
+            </footer>
+
+        </div>
+    </div>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/dealer")
+    @Scripts.Render("~/bundles/supplier")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

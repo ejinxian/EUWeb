@@ -1,0 +1,75 @@
+﻿.body-content {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.col-md-padding0{
+    padding-left: 1px;
+    padding-right: 0px;
+}
+.search-area-bgcolor {
+    background-color: #CCCCCC;
+	border-color: #CCCCCC;
+}
+.navbar-inverse {
+			background-color: #f7f7f7;
+			border-color: #f7f7f7;
+		}
+		table tr{ 
+			border:1px #CCCCCC solid;
+		}
+		table tr td{ 
+			border:1px #CCCCCC solid;
+			background-color:#fff
+		}
+		#menuSl li {
+			border-bottom:1px solid #CCCCCC;
+		}
+		.nav-sidebar > .active > a, .nav-sidebar > .active > a:hover, .nav-sidebar > .active > a:focus {
+			color: #fff;
+			background-color: #990000;
+		}
+		.main {
+			padding-right: 5px;
+			padding-left: 5px;
+		}
+		.input-group-addon {
+			padding: 6px 12px;
+			font-size: 14px;
+			font-weight: 400;
+			line-height: 1;
+			color: #555;
+			text-align: center;
+			background-color: rgba(238, 238, 238, 0.06);
+			border: 1px solid rgba(204, 204, 204, 0.03);
+			border-radius: 4px;
+		}
+		.padding-txt{
+			padding-top:8px;
+		}
+		.form-group-center{
+			margin-top:30px;
+		}
+.footer-row1 {
+    margin-right: 0px;
+    margin-left: 0px;
+}
+		.footer-row1 img{
+			
+		}
+
+        /* 经销商-预付账户*/
+        #dealerForm p{
+			font-size:20px;
+			font-weight:bold;
+		}
+		.nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover {
+			color: #FEFCFC;
+			cursor: default;
+			background-color: #990000;
+			border: 1px solid #F2F0F0;
+			border-bottom-color: transparent;
+		}
+
+
+
+

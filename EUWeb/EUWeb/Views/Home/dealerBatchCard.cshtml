@@ -1,0 +1,134 @@
+﻿
+@Html.Partial("dealerMenu", null)
+<div class="col-md-10" style="overflow:hidden;min-height:500px;">
+
+    <div class="container">
+        <div class="row row-margin0" style="padding:15px;">
+            <form>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="inputPassword" class="col-sm-3 control-label padding-txt">卡号发行商:</label>
+                        <div class="col-sm-7">
+                            <select class="form-control" placeholder="Username">
+                                <option>已退货</option>
+                                <option>退货退款</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-2">
+                            <button type="submit" class="btn green">查询</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="inputPassword" class="col-sm-3 control-label padding-txt">经销商:</label>
+                        <div class="col-sm-7">
+                            <select class="form-control" placeholder="Username">
+                                <option>上海XX有限公司</option>
+                                <option>浙江分公司</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-2">
+                            <button type="button" class="btn default">导入开卡</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!---列表--->
+
+    <ul class="nav nav-tabs" id="myTab_bachCard">
+        <li class="active"><a href="#myTab_bachCard_tab1">关联订单</a></li>
+        <li><a href="#myTab_bachCard_tab2">关联预约单</a></li>
+        <li><a href="#myTab_bachCard_tab3">所属卡号详情</a></li>
+    </ul>
+
+    <div class="tab-content">
+        <div class="tab-pane active" id="myTab_bachCard_tab1">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>日期</th>
+                        <th>卡号</th>
+                        <th>金额</th>
+                        <th>状态</th>
+                        <th>备注</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            2016-05-29 20:02:03
+                        </td>
+                        <td>消费卡0000214521564</td>
+                        <td>-500.00</td>
+                        <td>500.0</td>
+                        <td>备注：消费</td>
+                        <td>查看</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+        <div class="tab-pane" id="myTab_bachCard_tab2">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>日期</th>
+                        <th>充值来源</th>
+                        <th>金额</th>
+                        <th>状态</th>
+                        <th>备注</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            2016-05-29 20:02:03
+                        </td>
+                        <td>网银充值</td>
+                        <td>+500.00</td>
+                        <td>充值成功</td>
+                        <td>备注：消费</td>
+                        <td>查看</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+        <div class="tab-pane" id="myTab_bachCard_tab3">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>日期</th>
+                        <th>卡号</th>
+                        <th>金额</th>
+                        <th>状态</th>
+                        <th>备注</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            2016-05-29 20:02:03
+                        </td>
+                        <td>网银充值</td>
+                        <td>+500.00</td>
+                        <td>充值成功</td>
+                        <td>备注：消费</td>
+                        <td>查看</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+
+    </div>
+
+</div>
+

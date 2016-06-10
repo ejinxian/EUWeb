@@ -1,0 +1,108 @@
+﻿<div class="row footer-row1" style="height:100px;">
+    <div style="float:left;">
+        <a href="#" style="">
+            <img data-holder-rendered="true" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTcxIiBoZWlnaHQ9IjE4MCIgdmlld0JveD0iMCAwIDE3MSAxODAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjwhLS0KU291cmNlIFVSTDogaG9sZGVyLmpzLzEwMCV4MTgwCkNyZWF0ZWQgd2l0aCBIb2xkZXIuanMgMi42LjAuCkxlYXJuIG1vcmUgYXQgaHR0cDovL2hvbGRlcmpzLmNvbQooYykgMjAxMi0yMDE1IEl2YW4gTWFsb3BpbnNreSAtIGh0dHA6Ly9pbXNreS5jbwotLT48ZGVmcz48c3R5bGUgdHlwZT0idGV4dC9jc3MiPjwhW0NEQVRBWyNob2xkZXJfMTU0ZWM1OGRlNTMgdGV4dCB7IGZpbGw6I0FBQUFBQTtmb250LXdlaWdodDpib2xkO2ZvbnQtZmFtaWx5OkFyaWFsLCBIZWx2ZXRpY2EsIE9wZW4gU2Fucywgc2Fucy1zZXJpZiwgbW9ub3NwYWNlO2ZvbnQtc2l6ZToxMHB0IH0gXV0+PC9zdHlsZT48L2RlZnM+PGcgaWQ9ImhvbGRlcl8xNTRlYzU4ZGU1MyI+PHJlY3Qgd2lkdGg9IjE3MSIgaGVpZ2h0PSIxODAiIGZpbGw9IiNFRUVFRUUiLz48Zz48dGV4dCB4PSI1OSIgeT0iOTQuOCI+MTcxeDE4MDwvdGV4dD48L2c+PC9nPjwvc3ZnPg==" style="height: 100px; width:228px; display: block;" data-src="holder.js/100%x120" alt="100%x12">
+        </a>
+    </div>
+    <div style="height:100%;background-color:#FFECEC;font-size:20px;">
+        XX系统
+    </div>
+    <div style="clear:both;"></div>
+</div>
+<div class="col-md-2 col-md-padding0">
+    <ul class="nav nav-sidebar" id="menuSl" style="max-width:228px;">
+        <li>@Html.ActionLink("订单管理", "Index", "Home")</li>
+        <li>@Html.ActionLink("批量发货", "supplierBatchShipments", "Home")</li>
+        <li>@Html.ActionLink("投诉处理", "supplierComplaint", "Home")</li>
+        <li class="active">@Html.ActionLink("对账明细", "supplierCheckAccount", "Home")</li>
+    </ul>
+</div>
+<div class="col-md-10" style="background-color:#FFF;">
+    <div class="container-fluid">
+        <div class="row footer-row1" style="padding-top:5px;">
+            <form>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="inputPassword" class="col-sm-3 control-label padding-txt">单据编号:</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group form-group-center" style="padding-top:8px;">
+                        <label for="inputPassword" class="col-sm-3 control-label padding-txt">账单状态:</label>
+                        <div class="col-sm-9">
+                            <select class="form-control" placeholder="Username">
+                                <option>已付款</option>
+                                <option>未付款</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="inputPassword" class="col-sm-3 control-label padding-txt">付款金额:</label>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="col-sm-1 padding-txt">
+                            到
+                        </div>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group form-group-center" style="padding-top:8px;">
+                        <label for="inputPassword" class="col-sm-3 control-label padding-txt">账单日期:</label>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="col-sm-1 padding-txt">
+                            到
+                        </div>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-actions">
+                    <div class="row">
+                        <div class="col-md-offset-3 col-md-9">
+                            <button type="submit" class="btn green">查询</button>
+                            <button type="button" class="btn default">导出</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!---投诉列表--->
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>时间</th>
+                <th>摘要</th>
+                <th>单据编号</th>
+                <th>采购金额</th>
+                <th>收款金额</th>
+                <th>销售金额</th>
+                <th>付款金额</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>2016-05-29 16:21:14</td>
+                <td>采购</td>
+                <td>SR342342123</td>
+                <td>512443.00</td>
+                <td>512443.00</td>
+                <td>5143.00</td>
+                <td>51243.00</td>
+                <td>543.00</td>
+                <td>查看</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

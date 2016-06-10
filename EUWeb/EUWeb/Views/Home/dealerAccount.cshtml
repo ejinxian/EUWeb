@@ -1,0 +1,99 @@
+﻿
+@Html.Partial("dealerMenu", null)
+<div class="col-md-10" style="overflow:hidden;min-height:500px;">
+
+    <div class="container">
+        <div class="row row-margin0" style="padding:15px;">
+            <form id="dealerForm">
+                <div class="col-md-2">
+                    <a href="#" style="">
+                        <img data-holder-rendered="true" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTcxIiBoZWlnaHQ9IjE4MCIgdmlld0JveD0iMCAwIDE3MSAxODAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjwhLS0KU291cmNlIFVSTDogaG9sZGVyLmpzLzEwMCV4MTgwCkNyZWF0ZWQgd2l0aCBIb2xkZXIuanMgMi42LjAuCkxlYXJuIG1vcmUgYXQgaHR0cDovL2hvbGRlcmpzLmNvbQooYykgMjAxMi0yMDE1IEl2YW4gTWFsb3BpbnNreSAtIGh0dHA6Ly9pbXNreS5jbwotLT48ZGVmcz48c3R5bGUgdHlwZT0idGV4dC9jc3MiPjwhW0NEQVRBWyNob2xkZXJfMTU0ZWM1OGRlNTMgdGV4dCB7IGZpbGw6I0FBQUFBQTtmb250LXdlaWdodDpib2xkO2ZvbnQtZmFtaWx5OkFyaWFsLCBIZWx2ZXRpY2EsIE9wZW4gU2Fucywgc2Fucy1zZXJpZiwgbW9ub3NwYWNlO2ZvbnQtc2l6ZToxMHB0IH0gXV0+PC9zdHlsZT48L2RlZnM+PGcgaWQ9ImhvbGRlcl8xNTRlYzU4ZGU1MyI+PHJlY3Qgd2lkdGg9IjE3MSIgaGVpZ2h0PSIxODAiIGZpbGw9IiNFRUVFRUUiLz48Zz48dGV4dCB4PSI1OSIgeT0iOTQuOCI+MTcxeDE4MDwvdGV4dD48L2c+PC9nPjwvc3ZnPg==" style="height: 120px; width:120px; display: block;" data-src="holder.js/100%x100" alt="100%x12">
+                    </a>
+                </div>
+                <div class="col-md-2">
+                    <p>90000,230.00</p>
+                    <label>预付余额</label>
+                    </br>
+                    <button type="submit" class="btn green">预付充值</button>
+                </div>
+                <div class="col-md-2">
+                    <p>90000,230.00</p>
+                    <label>消费总额</label>
+                </div>
+                <div class="col-md-2">
+                    <p>90000,230.00</p>
+                    <label>授信额度</label>
+                </div>
+                <div class="col-md-4">
+
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!---列表--->
+
+    <ul class="nav nav-tabs" id="myTab">
+        <li class="active"><a href="#myTab_tab1">扣款明细</a></li>
+        <li><a href="#myTab_tab2">充值明细</a></li>
+    </ul>
+
+    <div class="tab-content">
+        <div class="tab-pane active" id="myTab_tab1">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>日期</th>
+                        <th>卡号</th>
+                        <th>金额</th>
+                        <th>状态</th>
+                        <th>备注</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            2016-05-29 20:02:03
+                        </td>
+                        <td>消费卡0000214521564</td>
+                        <td>-500.00</td>
+                        <td>500.0</td>
+                        <td>备注：消费</td>
+                        <td>查看</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+        <div class="tab-pane" id="myTab_tab2">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>日期</th>
+                        <th>充值来源</th>
+                        <th>金额</th>
+                        <th>状态</th>
+                        <th>备注</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            2016-05-29 20:02:03
+                        </td>
+                        <td>网银充值</td>
+                        <td>+500.00</td>
+                        <td>充值成功</td>
+                        <td>备注：消费</td>
+                        <td>查看</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+
+</div>
+

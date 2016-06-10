@@ -1,0 +1,58 @@
+﻿@model  EU.Models.Article
+
+<div id="toolbar">
+    <div>
+        <a href="#" class="easyui-linkbutton" data-options="iconCls:'icon-edit',plain:true">修改</a>
+        <a href="#" class="easyui-linkbutton" data-options="iconCls:'icon-remove',plain:true" ">删除</a>
+        <a href="#" class="easyui-linkbutton" data-options="iconCls:'icon-reload',plain:true" onclick="$('#article_list').datagrid('reload');">刷新</a>
+    </div>
+    <div class="form-inline">
+        <label>栏目</label><input id="combo_category" data-options="url:'@Url.Action("JsonTree", "Category", new { model="Article" })'" class="easyui-combotree" />
+        <label>标题</label> <input id="textbox_title" class="input-easyui" style="width:280px" />
+        <label>录入人</label><input id="textbox_inputer" class="input-easyui" />
+        <label>添加日期</label>
+        <input id="datebox_fromdate" type="datetime" class="easyui-datebox" style="width:120px" /> -
+        <input id="datebox_todate" type="datetime" class="easyui-datebox" style="width:120px; " />
+        <a href="#" id="btn_search" data-options="iconCls:'icon-search'" class="easyui-linkbutton">查询</a>
+    </div>
+
+</div>
+<table id="article_list"></table>
+<link rel="stylesheet" type="text/css" href="~/Scripts/jquery-easyui-1.4.5/themes/default/easyui.css">
+<link rel="stylesheet" type="text/css" href="~/Scripts/jquery-easyui-1.4.5/themes/icon.css">
+@*<link rel="stylesheet" type="text/css" href="~/demo.css">*@
+<script type="text/javascript" src="~/Scripts/jquery-1.11.3.js"></script>
+<script type="text/javascript" src="~/Scripts/jquery-ui-1.11.4.js"></script>
+<script type="text/javascript" src="~/Scripts/jquery-easyui-1.4.5/jquery.easyui.min.js"></script>
+<script type="text/javascript" src="~/Scripts/jquery-easyui-1.4.5/plugins/jquery.datagrid.js"></script>
+<script type="text/javascript">
+    $().ready(function () {
+        $("#article_list").datagrid({
+            loadMsg: '加载中……',
+            pagination: true,
+            url: '@Url.Action("JsonList","Article")',
+            columns: [[
+                { field: 'ModelID', title: 'ID', checkbox: true },
+                { field: 'CategoryName', title: '栏目' },
+                { field: 'Title', title: '标题' },
+                { field: 'Inputer', title: '录入', align: 'right' },
+                { field: 'Hits', title: '点击', align: 'right' },
+                { field: 'ReleaseDate', title: '发布日期', align: 'right', formatter: function (value, row, index) { return jsonDateFormat(value); } },
+                { field: 'StatusString', title: '状态', width: 100, align: 'right' }
+            ]],
+            toolbar: '#toolbar',
+            idField: 'ModelID',
+        });
+        //查找
+        $("#btn_search").click(function () {
+            $("#article_list").datagrid('load', {
+                title: $("#textbox_title").val(),
+                input: $("#textbox_inputer").val(),
+                category: $("#combo_category").combotree('getValue'),
+                fromDate: $("#datebox_fromdate").datebox('getValue'),
+                toDate: $("#datebox_todate").datebox('getValue')
+            });
+        });
+    });
+       
+</script>

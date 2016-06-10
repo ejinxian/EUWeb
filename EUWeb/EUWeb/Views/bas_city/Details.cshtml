@@ -1,0 +1,51 @@
+﻿@model EUWeb.Models.bas_city
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>bas_city</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ProvinceId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProvinceId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Code)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Code)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CityName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CityName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Disabled)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Disabled)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.CityId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

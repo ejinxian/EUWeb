@@ -1,0 +1,107 @@
+﻿@{
+    ViewBag.Title = "购物车";
+}
+
+<div id="pageID" name="shoppingOrder" class="pageIdHide"></div>
+<!-- row1 begin -->
+<div class="row" style="margin-top:20px;margin-bottom:10px;">
+    <div class="col-md-2" style="font-size:20px;font-weight:bold;color:#990000;">全部商品 4</div>
+    <div class="col-md-8"></div>
+    <div class="col-md-2">
+        配送至：<select style="width:120px;height:30px;"><option>上海</option><option>北京</option></select>
+    </div>
+</div>
+<!-- row1 end -->
+<!-- row2 begin -->
+<div class="row" style="min-height:300px;">
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th width="5%">
+                    <input type="checkbox" value="all" />全选
+                </th>
+                <th width="60%">商品</th>
+                <th>单价</th>
+                <th>数量</th>
+                <th>小计</th>
+                <th width="5%">操作</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="info">
+                <td> <input type="checkbox" value="all" /></td>
+                <td>
+                    <div class="col-md-3">
+                        <a href="#" class="img-rounded">
+                            <img class="defaultImage" style="height:100px;">
+                        </a>
+                    </div>
+                    <div class="col-md-9">
+                        AMD APU系列 A10-7870K 四核 R7核显
+                        FM2+接口 盒装CPU处理器
+                        四核CPU+八核GPU！真正亲民高大上！
+                        入手不后悔~~~
+                    </div>
+                </td>
+                <td>333.00</td>
+                <td>2</td>
+                <td>666.00</td>
+                <td>删除</td>
+            </tr>
+
+            <tr class="info">
+                <td> <input type="checkbox" value="all" /></td>
+                <td>
+                    <div class="col-md-3">
+                        <a href="#" class="img-rounded">
+                            <img class="defaultImage" style="height:100px;">
+                        </a>
+                    </div>
+                    <div class="col-md-9">
+                        AMD APU系列 A10-7870K 四核 R7核显
+                        FM2+接口 盒装CPU处理器
+                        四核CPU+八核GPU！真正亲民高大上！
+                        入手不后悔~~~
+                    </div>
+                </td>
+                <td>333.00</td>
+                <td>2</td>
+                <td>666.00</td>
+                <td>删除</td>
+            </tr>
+
+            <tr class="info">
+                <td> <input type="checkbox" value="all" /></td>
+                <td>
+                    <div class="col-md-3">
+                        <a href="#" class="img-rounded">
+                            <img class="defaultImage" style="height:100px;">
+                        </a>
+                    </div>
+                    <div class="col-md-9">
+                        AMD APU系列 A10-7870K 四核 R7核显
+                        FM2+接口 盒装CPU处理器
+                        四核CPU+八核GPU！真正亲民高大上！
+                        入手不后悔~~~
+                    </div>
+                </td>
+                <td>333.00</td>
+                <td>2</td>
+                <td>666.00</td>
+                <td>删除</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<!-- row2 end -->
+<!-- row 3 begin-->
+<div class="row" style="height: 60px;margin-top:20px;margin-bottom:20px;background-color:#f7f7f7;padding:10px 0px;">
+    <div class="col-md-6">
+        <input type="checkbox" value="all" />全选 <span style="color:#6699FF;margin-left:10%;">删除选中的商品</span>
+    </div>
+    <div class="col-md-6 text-right">
+        已选择 4件 商品,总价<strong style="color:#990000;font-size:20px;">26234.00元</strong>
+        @*<button class="btn btn-danger" style="background-color:#990000;font-size:20px;">去结算</button>*@
+        <a href="~/Home/shoppingOrder" class="btn btn-danger" style="background-color:#990000;font-size:20px;">去结算</a>
+    </div>
+</div>	

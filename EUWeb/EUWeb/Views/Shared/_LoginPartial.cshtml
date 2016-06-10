@@ -1,0 +1,64 @@
+﻿@using Microsoft.AspNet.Identity
+@if (Request.IsAuthenticated)
+{
+    using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+    {
+    @Html.AntiForgeryToken()
+
+    <ul class="nav navbar-nav navbar-right">
+        <li>
+            @Html.ActionLink("你好，" + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
+        </li>
+        <li><a href="javascript:document.getElementById('logoutForm').submit()">注销</a></li>
+    </ul>
+    }
+}
+else
+{
+    <ul class="nav navbar-nav navbar-right">
+        <li>@Html.ActionLink("注册", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
+        <li>@Html.ActionLink("登录", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
+        <li>@Html.ActionLink("帮助", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
+    </ul>
+}
+<div class="row index_top2">
+    <div class="col-md-2" style="padding:0px;">
+        <a href="#" style="">
+            <img class="defaultImage" style="height:100px;width:228px;">
+        </a>
+    </div>
+    <div class="col-md-9 index_Top2_Search">
+        <div class="row"><input type="text"><button>搜索</button></div>
+        <div class="row"><label style="font-weight:bold">热门搜索:</label><label>腊味礼盒</label><label>德福隆菌菇礼盒</label><label>金福年货礼盒</label><label>龙的养生煲</label></div>
+    </div>
+    <div class="col-md-1" style="padding:0px;">
+        <a href="#" style="">
+            <img class="defaultImage" style="height:100px;width:110px;">
+        </a>
+    </div>
+</div>
+<div class="row index_top2_menu">
+    <div id="index_top2_navbar_id" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav  navbar-left index_top2_menu_ul">
+            <li class="open">
+                <!-- <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                   全部商品分类 <span class="caret" style="margin-left:20px;"></span>
+                </a> -->
+                <a class="dropdown-toggle" href="#">
+                    全部商品分类
+                </a>
+                <ul class="dropdown-menu index_top2_menu_ul">
+                    <li><a href="#">礼品礼盒</a></li>
+                    <li><a href="#">食品</a></li>
+                    <li><a href="#">节日蛋糕</a></li>
+                    <!-- <li class="divider"></li> -->
+                    <li><a href="#">中秋月饼</a></li>
+                    <li><a href="#">家用电器</a></li>
+                </ul>
+            </li>
+            <li></li>
+            <li><a href="#">礼品兑换</a></li>
+            <li><a href="#">积分商城</a></li>
+        </ul>
+    </div>
+</div>
